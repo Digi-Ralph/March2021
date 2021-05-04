@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
+:root {
+  --pseudo-backgroundImage: url(./img/concept1.bmp);
+}
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  background-color: #fff;
+  font-size: 14px;
+  font-family: "Lobster";
+  font-family: "Dancing Script";
+  overflow: hidden;
+  cursor: none;
+}
+
+.container {
+  width: 100vw;
+}
+.container .cursor {
+  pointer-events: none;
+  position: absolute;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  background-color: #161616;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+}
+.container .bg {
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 1px, transparent 0), linear-gradient(180deg, rgba(0, 0, 0, 0.5) 1px, transparent 0);
+  background-size: 3.5vw 3.5vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+}
+.container .box-top {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.container .box-top .logo {
+  float: left;
+  position: relative;
+  color: #161616;
+  text-align: center;
+  font-size: 2rem;
+  top: 10px;
+  left: 50%;
+  font-family: "Dancing Script";
+  transform: rotate(-10deg) translateX(-50%);
+}
+.container .box-top .menu {
+  height: 100vh;
+  color: #161616;
+  font-size: 1.5rem;
+  font-family: "Dancing Script";
+  letter-spacing: 5px;
+  text-rendering: optimizeLegibility;
+}
+.container .box-top .menu .menu1 {
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  transform: rotate(-90deg);
+}
+.container .box-top .menu .menu1:hover ~ .cursor {
+  width: 130px;
+  height: 130px;
+  transition: all 0.3s ease-out;
+  background-image: url(./img/arrow-down-right.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: #fff;
+  color: #fff;
+}
+.container .box-top .menu .menu2 {
+  position: absolute;
+  top: 50%;
+  right: -1%;
+  transform: rotate(90deg);
+}
+.container .box-top .menu .menu2:hover ~ .cursor {
+  width: 130px;
+  height: 130px;
+  transition: all 0.3s ease-out;
+  background-image: url(./img/arrow-down-left.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: #fff;
+  color: #fff;
+}
+.container .box-top .menu .menu3 {
+  position: absolute;
+  left: calc(100vw - 50%);
+  bottom: -10px;
+  transform: translate(-50%, -50%);
+}
+.container .box-top .menu .menu3:hover ~ .cursor {
+  width: 130px;
+  height: 130px;
+  transition: all 0.3s ease-out;
+  background-image: url(./img/Arrow-Up.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-color: #fff;
+  color: #fff;
+}
+.container .word {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  top: 55%;
+  left: 50%;
+  z-index: 1;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  opacity: 1;
+  transition: all 0.5s ease-out;
+}
+.container .word::before {
+  content: "";
+  background-image: var(--pseudo-backgroundImage);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  width: 200px;
+  height: 350px;
+  position: absolute;
+  z-index: 1;
+  left: -100px;
+  -webkit-animation: one 4s ease-in infinite;
+          animation: one 4s ease-in infinite;
+}
+.container .card {
+  border-radius: 2%;
+  height: 380px;
+  width: 300px;
+  position: relative;
+  left: 50%;
+  top: 320px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+.container .card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  -webkit-animation: two 0.5s linear forwards;
+          animation: two 0.5s linear forwards;
+}
+
+@-webkit-keyframes one {
+  0% {
+    top: -130px;
+  }
+  50% {
+    top: -170px;
+  }
+  100% {
+    top: -130px;
+  }
+}
+
+@keyframes one {
+  0% {
+    top: -130px;
+  }
+  50% {
+    top: -170px;
+  }
+  100% {
+    top: -130px;
+  }
+}
+@-webkit-keyframes two {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}
+@keyframes two {
+  from {
+    top: 100%;
+  }
+  to {
+    top: 0%;
+  }
+}/*# sourceMappingURL=style.css.map */
