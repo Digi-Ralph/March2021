@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  color: #fff;
+  font-size: 14px;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  overflow: hidden;
+}
+.main .box1 {
+  width: 630px;
+  height: 625px;
+  mix-blend-mode: difference;
+  background-image: url(./img/1.png);
+  position: absolute;
+  bottom: -100%;
+  left: 40%;
+  border-radius: 50%;
+  -webkit-animation: anim 2s forwards, anim2 3s forwards 3s;
+          animation: anim 2s forwards, anim2 3s forwards 3s;
+}
+.main .box1::after {
+  mix-blend-mode: soft-light;
+  content: "";
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+  position: absolute;
+  width: 630px;
+  height: 625px;
+  background-image: url(./img/2.png);
+  left: 0px;
+  z-index: -1;
+}
+.main .box2 {
+  width: auto;
+  height: auto;
+  color: #fff;
+  font-size: 10em;
+  font-weight: 500;
+  line-height: 130px;
+  position: absolute;
+  top: 250px;
+  left: 100px;
+  overflow: hidden;
+}
+.main .box2 .text {
+  position: relative;
+  left: -100%;
+  -webkit-animation: anim3 2s forwards 3s;
+          animation: anim3 2s forwards 3s;
+}
+.main .box3 {
+  overflow: hidden;
+}
+.main .box3 .container {
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  -webkit-animation: anim4 2s forwards 2.5s;
+          animation: anim4 2s forwards 2.5s;
+}
+.main .box3 .container .logo {
+  float: left;
+  margin-left: 100px;
+  margin-top: 20px;
+  width: 45px;
+  height: 45px;
+}
+.main .box3 .container .menu {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 2px;
+  margin-right: 150px;
+  margin-top: 20px;
+  float: right;
+}
+.main .box3 .container .menu ul {
+  list-style: none;
+}
+.main .box3 .container .menu ul li {
+  display: inline-block;
+  margin-left: 100px;
+}
+
+@-webkit-keyframes anim {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+
+@keyframes anim {
+  from {
+    bottom: -100%;
+  }
+  to {
+    bottom: 0%;
+  }
+}
+@-webkit-keyframes anim2 {
+  from {
+    left: 40%;
+    width: 630px;
+  }
+  to {
+    width: 0px;
+    left: 40%;
+  }
+}
+@keyframes anim2 {
+  from {
+    left: 40%;
+    width: 630px;
+  }
+  to {
+    width: 0px;
+    left: 40%;
+  }
+}
+@-webkit-keyframes anim3 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@keyframes anim3 {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 0%;
+  }
+}
+@-webkit-keyframes anim4 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes anim4 {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
