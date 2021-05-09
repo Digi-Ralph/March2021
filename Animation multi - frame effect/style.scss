@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Rationale&display=swap');
+
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: content-box;
+}
+
+body {
+	font-family: 'Rationale';
+	background-color: #161616;
+	color: #fff;
+	font-size: 14px;
+	overflow-x: hidden;
+}
+
+.moon {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	border-radius: 50%;
+	//absolute positioning Trick top / left / transform
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: rgb(255, 175, 1);
+	box-shadow: 0px 0px 10px rgba(255, 223, 43, 0.774);
+	.bird {
+		position: absolute;
+		top: 40%;
+		left: 50%;
+		background-color: transparent;
+		background-position: center center;
+		background-image: url('./img/pngd.png');
+		background-repeat: no-repeat;
+		width: 460px;
+		height: 250px;
+		transform: translate(-50%, -30%);
+		margin: 2em auto;
+		animation: run 1s steps(5) infinite;
+	}
+	p.loading {
+		width: 100%;
+		height: 10px;
+		position: absolute;
+		left: 0;
+		bottom: -50px;
+		color: #e2e2e2;
+		text-shadow: 1px 1px 1px #fff;
+		text-align: center;
+	}
+	input.left,
+	input.right,
+	span.left,
+	span.right {
+		position: absolute;
+		top: -20px;
+		width: 20px;
+		height: 20px;
+		cursor: pointer;
+		z-index: 20;
+	}
+	span.left,
+	span.right {
+		// means elements cannot be interacted with
+		pointer-events: none;
+		color: #fff;
+		font-size: 20px;
+		text-shadow: 1px 1px 1px #fff;
+	}
+	input.left,
+	span.left {
+		left: 0;
+	}
+	input.right,
+	span.right {
+		right: 0;
+	}
+	input.left,
+	input.right {
+		opacity: 0;
+	}
+	.left:checked ~ .bird {
+		transform: translate(-50%, -30%) rotateY(180deg);
+	}
+}
+
+@keyframes run {
+	100% {
+		background-position: -4347px, 0;
+	}
+}
