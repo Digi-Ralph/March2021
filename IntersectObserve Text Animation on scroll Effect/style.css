@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .title {
+  font-size: 15em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.main .wrapper-1 {
+  position: absolute;
+  left: 5%;
+  top: 100vh;
+}
+.main .wrapper-1 ul li {
+  list-style: none;
+  font-size: 3.5rem;
+  margin-top: 0.5em;
+  cursor: pointer;
+  overflow: hidden;
+  font-family: "Parisienne", cursive;
+}
+.main .wrapper-1 ul li span {
+  transform: translateY(100%);
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.main .wrapper-1 ul li span.active {
+  transform: translateY(0%);
+  transition: 1s ease-out;
+}
+.main .wrapper-1 ul li span.space {
+  margin-left: 0.2em;
+}
+.main .wrapper-1 ul li:hover {
+  opacity: 0.5;
+}/*# sourceMappingURL=style.css.map */

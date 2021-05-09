@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  font-size: 14px;
+}
+
+.nagivation {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.nagivation ul li {
+  list-style: none;
+  font-size: 3rem;
+  padding: 0.1em 0.5em;
+  margin: 0.5em;
+  transition: all 0.2s;
+  border-radius: 5px;
+}
+.nagivation ul li:hover {
+  background-color: #fff;
+}
+.nagivation ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.nagivation ul:hover li a {
+  color: #5c5b5b;
+}
+.nagivation ul li:hover a {
+  color: black;
+}
+.nagivation ul li::before {
+  content: " ";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 5em;
+  color: rgba(255, 254, 254, 0.1);
+  z-index: -1;
+  opacity: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 500px;
+  transition: all 0.5s, left 0.5s;
+}
+.nagivation ul li:hover:before {
+  content: attr(data-text);
+  opacity: 1;
+  left: 50%;
+  letter-spacing: 10px;
+}
+.nagivation ul li:nth-child(6n+1):hover {
+  transition: all 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(255, 255, 255, 0.452);
+}
+.nagivation ul li:nth-child(6n+2):hover {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(255, 0, 0, 0.452);
+}
+.nagivation ul li:nth-child(6n+3):hover {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(42, 202, 21, 0.452);
+}
+.nagivation ul li:nth-child(6n+4):hover {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(225, 0, 255, 0.452);
+}
+.nagivation ul li:nth-child(6n+5):hover {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(0, 204, 255, 0.452);
+}
+.nagivation ul li:nth-child(6n+6):hover {
+  transition: box-shadow 0.3s ease-out;
+  box-shadow: 0 0 0 100vw rgba(255, 0, 76, 0.452);
+}/*# sourceMappingURL=style.css.map */

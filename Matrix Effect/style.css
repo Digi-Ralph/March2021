@@ -1,0 +1,56 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap"); */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+}
+
+#index {
+  height: 100%;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  perspective: 100000px;
+}
+#index .loaded .matrix {
+  height: 100vh;
+}
+#index.loaded {
+  -webkit-animation: prespective 30s 5s alternate infinite;
+          animation: prespective 30s 5s alternate infinite;
+  transition: all 5s;
+}
+#index .matrix {
+  position: relative;
+  top: 0;
+  opacity: 0.8;
+  padding: 0 5px;
+  color: #2bff00;
+  text-shadow: 0 1px 2px rgba(10, 255, 10, 0.5);
+  letter-spacing: 2px;
+  transition: all 5s ease-in-out;
+  border-radius: 0 5px 5px 0;
+  flex: 1 0 auto;
+  white-space: nowrap;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  overflow: hidden;
+}
+
+@-webkit-keyframes prespective {
+  50% {
+    perspective: 1px;
+  }
+}
+
+@keyframes prespective {
+  50% {
+    perspective: 1px;
+  }
+}/*# sourceMappingURL=style.css.map */

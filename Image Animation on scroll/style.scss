@@ -1,0 +1,47 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.header {
+    position: relative;
+    background-image: url(./img/index.jpg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    //  Fixed : fix the image in the backgroud even when scrolling
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    border: 1px solid red;
+}
+
+.block {
+    margin: 0 auto;
+    text-align: left;
+    max-width: 1000px;
+    width: 800px;
+    line-height: 1.8em;
+    letter-spacing: 2px;
+    border: 1px solid purple;
+    padding: 1.5em;
+    opacity: 1;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 1.2em;
+    }
+
+    p {
+        font-size: 1.5em;
+        font-weight: 500;
+    }
+}
