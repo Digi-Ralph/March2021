@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container .line {
+  position: relative;
+  font-size: 2rem;
+  width: 23em;
+  /* The typwriter cursor */
+  border-right: 2px solid white;
+  /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
+  /* Keeps the content on a single line */
+  white-space: nowrap;
+  transition: all 0.2s ease-in-out;
+}
+.container .typewriter {
+  -webkit-animation: blinkingTextCursor 500ms steps(40) infinite normal, typewriter-reverse 10s steps(40) 1s infinite both;
+          animation: blinkingTextCursor 500ms steps(40) infinite normal, typewriter-reverse 10s steps(40) 1s infinite both;
+}
+
+@-webkit-keyframes typewriter-reverse {
+  0% {
+    width: 0em;
+  }
+  25% {
+    width: 0em;
+  }
+  50% {
+    width: 23em;
+  }
+  75% {
+    width: 23em;
+  }
+  100% {
+    width: 0em;
+  }
+}
+
+@keyframes typewriter-reverse {
+  0% {
+    width: 0em;
+  }
+  25% {
+    width: 0em;
+  }
+  50% {
+    width: 23em;
+  }
+  75% {
+    width: 23em;
+  }
+  100% {
+    width: 0em;
+  }
+}
+@-webkit-keyframes blinkingTextCursor {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes blinkingTextCursor {
+  from {
+    border-right-color: white;
+  }
+  to {
+    border-right-color: transparent;
+  }
+}/*# sourceMappingURL=style.css.map */

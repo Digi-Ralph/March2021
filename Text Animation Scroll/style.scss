@@ -1,0 +1,41 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    height: 2000px;
+}
+
+.main {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+
+
+    .box {
+        width: 400px;
+        height: 350px;
+        display: inline-block;
+        overflow: hidden;
+        border-left: 1px solid red;
+        text-align: center;
+
+        .letter {
+            top: 15%;
+            font-family: fantasy;
+            // font-size: 19rem;
+            font-size: 11cm;
+            line-height: 250px;
+            position: relative;
+            font-weight: 700;
+            left: -350px;
+            transition: all .25s linear;
+        }
+    }
+
+}

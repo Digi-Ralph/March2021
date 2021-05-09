@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #161616;
+  font-family: Roboto;
+  font-size: 14px;
+  height: 2000px;
+  overflow-x: hidden;
+}
+
+main {
+  margin-top: 200px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+ .img {
+  background-image: url(./img/index.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 500px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  color: red;
+}
+.title.title-dark {
+  /* overflow: hidden; */
+  position: absolute;
+  z-index: 4;
+  color: rgb(255, 0, 0);
+  font-size: 4rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: transform 0.1s linear;
+  top: 50%;
+  left: -35.5%;
+}
+ .title {
+  /* overflow: hidden; */
+  position: absolute;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-size: 4rem;
+  font-weight: 700;
+  white-space: nowrap;
+  text-transform: uppercase;
+  transition: transform 0.1s linear;
+  top: 50%;
+  left: 30%;
+}/*# sourceMappingURL=style.css.map */

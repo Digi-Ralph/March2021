@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kenia&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #fff;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100vw;
+  height: 100%;
+  position: relative;
+}
+.container .nav--bar {
+  position: sticky;
+  top: 0%;
+  height: 100vh;
+  width: 100%;
+  transition: all 0.7s ease-in-out;
+  box-shadow: 5px 2px 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+}
+.container .nav--bar.active {
+  height: 80px;
+}
+.container .nav--bar img {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.container .nav--bar .logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20vw;
+  transition: all 0.7s ease-in-out;
+  font-family: "Kenia", cursive;
+  color: #fff;
+  cursor: pointer;
+}
+.container .nav--bar .logo:hover {
+  color: #161616;
+}
+.container .nav--bar .logo.active {
+  font-size: 6vw;
+  left: 10%;
+}
+.container .nav--bar .list ul {
+  display: flex;
+  transition: all 0.7s ease-in-out;
+  position: absolute;
+  right: -100%;
+  top: 35%;
+  opacity: 0;
+}
+.container .nav--bar .list ul li {
+  color: #fff;
+  list-style: none;
+  padding: 0 0.2em;
+  margin-right: 1em;
+  font-size: 2rem;
+}
+.container .nav--bar .list ul li:hover {
+  transition: all 0.2s ease-in-out;
+  color: black;
+}
+.container .nav--bar .list ul.active {
+  right: 2%;
+  top: 35%;
+  transition: all 1s ease-in-out;
+  transform: translateX(0%);
+  opacity: 1;
+}
+.container .section {
+  margin-top: 150px;
+  height: 100%;
+  color: #161616;
+}
+.container .section * {
+  width: 80%;
+  margin: 0 auto;
+}
+.container .section h1 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 4rem;
+  text-align: center;
+}
+.container .section p {
+  margin-top: 1em;
+  font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .list #nav--mobile {
+    background-image: url(./img/hambergur.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    top: 25%;
+    right: 5%;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  .list ul {
+    display: flex;
+    background-color: #161616fb;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0% !important;
+    right: 0% !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+  }
+  .list ul li {
+    margin: 1em;
+    cursor: pointer;
+  }
+  .list ul.close {
+    top: -100vh !important;
+  }
+  .list ul #nav--close {
+    background-image: url(./img/close.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    border: none;
+    top: 3%;
+    right: 5%;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=style.css.map */

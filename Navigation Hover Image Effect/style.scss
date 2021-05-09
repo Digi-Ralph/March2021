@@ -1,0 +1,95 @@
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .box {
+        // height: 100px;
+        height: 70px;
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 20px;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        position: relative;
+        // top: 40%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+
+        label {
+            position: relative;
+            line-height: 70px;
+            z-index: 999;
+            cursor: pointer;
+
+
+        }
+
+        .imgbox1,
+        .imgbox2,
+        .imgbox3,
+        .imgbox4 {
+            clip-path: circle(0%);
+            height: 70px;
+            width: 100%;
+            // transition: all .5s;
+            transition: all 0.5s ease-in-out;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .imgbox1 {
+            background-image: url(./img/index.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imgbox2 {
+            background-image: url(./img/index2.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imgbox3 {
+            background-image: url(./img/index3.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imgbox4 {
+            background-image: url(./img/index4.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &:hover .imgbox1,
+        &:hover .imgbox2,
+        &:hover .imgbox3,
+        &:hover .imgbox4 {
+            // height: 100px;
+            // height: 70px;
+            clip-path: circle(100%);
+
+
+        }
+    }
+
+}

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Rationale&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+body {
+  font-family: "Rationale";
+  background-color: #161616;
+  color: #fff;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.container .text-fill {
+  font-size: 10rem;
+  text-transform: uppercase;
+  position: relative;
+  background: white;
+  cursor: pointer;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+.container .text-fill::before {
+  -webkit-background-clip: text;
+  background-clip: text;
+  content: attr(data-name);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  width: 0%;
+  height: inherit;
+  background-color: purple;
+  transition: all 1s ease-in-out;
+  cursor: pointer;
+}
+.container .text-fill:hover::before {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

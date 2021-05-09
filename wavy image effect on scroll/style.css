@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap");
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #161616;
+  color: #fff;
+  font-family: "Ceviche One";
+  font-size: 14px;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin-left: 200px;
+  display: block ruby;
+  transition: transform 0.25s;
+  will-change: transform;
+  border: 1px solid red;
+}
+.container .block {
+  position: relative;
+  width: 400px;
+  height: 350px;
+  margin: 10px 300px 20px 80px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: transform 0.25s;
+  will-change: transform;
+}
+.container .block h1 {
+  position: absolute;
+  font-weight: bold;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+.container .block-1 {
+  background-image: url(./img/index.jpg);
+}
+.container .block-1 h1 {
+  bottom: 50px;
+  right: -60px;
+}
+.container .block-2 {
+  background-image: url(./img/index2.jpg);
+}
+.container .block-2 h1 {
+  right: -60px;
+}
+.container .block-3 {
+  background-image: url(./img/index3.jpg);
+}
+.container .block-3 h1 {
+  bottom: 50px;
+  right: -60px;
+}
+.container .block-4 {
+  background-image: url(./img/index4.jpg);
+}
+.container .block-4 h1 {
+  right: -60px;
+}
+.container .block-5 {
+  background-image: url(./img/index5.jpg);
+}
+.container .block-5 h1 {
+  bottom: 50px;
+  right: -60px;
+}
+.container .block-6 {
+  background-image: url(./img/index6.jpg);
+}
+.container .block-6 h1 {
+  right: -60px;
+}/*# sourceMappingURL=style.css.map */
