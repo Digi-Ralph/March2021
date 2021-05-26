@@ -1,0 +1,112 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #d1d1d1;
+	color: #161616;
+	font-family: 'Poppins', sans-serif;
+	font-size: 16px;
+	height: 100vh;
+}
+
+.container {
+	width: 100vw;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	width: 800px;
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.box-text {
+	width: 200px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.state {
+	font-size: 1.5rem;
+	font-weight: 700;
+	text-align: center;
+	padding: 30px 0;
+}
+
+.box-game {
+	height: 300px;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.rock {
+	width: 200px;
+	height: 200px;
+	background-image: url(./img/rock.png);
+}
+.rock:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: #161616;
+	border: 1px solid #161616;
+	border-radius: 20%;
+}
+.paper {
+	width: 200px;
+	height: 200px;
+	background-image: url(./img/paper.png);
+}
+.paper:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: #161616;
+	border: 1px solid #161616;
+	border-radius: 20%;
+}
+.sissors {
+	width: 200px;
+	height: 200px;
+	background-image: url(./img/sissors.png);
+}
+.sissors:hover {
+	transition: all 0.5s ease-in-out;
+	background-color: #161616;
+	border: 1px solid #161616;
+	border-radius: 20%;
+}
+
+.rock,
+.sissors,
+.paper {
+	cursor: pointer;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.desc {
+	font-size: 1rem;
+	font-weight: 700;
+	text-align: center;
+}
+
+.user {
+	font-weight: 700;
+	font-size: 2rem;
+	color: green;
+}
+
+.pc {
+	font-weight: 700;
+	font-size: 2rem;
+	color: red;
+}
